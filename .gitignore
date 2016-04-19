@@ -1,0 +1,15 @@
+# Directories #
+
+bower_components/
+node_modules/
+coverage/
+public/
+
+
+# Files #
+
+.publish
+npm-debug.log
+
+.DS_Store
+Desktop.ini
