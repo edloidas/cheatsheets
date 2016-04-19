@@ -1,0 +1,79 @@
+"*":
+  "advanced-open-file":
+    createDirectories: true
+    createFileInstantly: true
+    fuzzyMatch: true
+  "atom-alignment": {}
+  "atom-css-comb": {}
+  "atom-csscomb": {}
+  "atom-terminal-panel":
+    WindowHeight: 450
+    statusBarText: "%(dynamic) %(username) [%(hours):%(minutes):%(seconds)]"
+  blame:
+    defaultWidth: 280
+  core:
+    disabledPackages: [
+      "autocomplete-paths"
+    ]
+    ignoredNames: [
+      ".git"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "node_modules"
+    ]
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "atom-terminal-panel"
+      "git-time-machine"
+      "git-blame"
+    ]
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  "css-comb": {}
+  editor:
+    fontFamily: "Hack"
+    fontSize: 15
+    invisibles: {}
+    showInvisibles: true
+    tabType: "soft"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  "git-blame":
+    columnWidth: 270
+  "git-plus": {}
+  "highlight-selected":
+    timeout: 100
+  "js-hyperclick": {}
+  linter:
+    errorPanelHeight: 26
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
+  "merge-conflicts": {}
+  minimap:
+    plugins:
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+  nuclide:
+    remoteProjectsConfig: []
+  "nuclide-file-tree": {}
+  "nuclide-health":
+    showCpu: true
+    showMemory: true
+  pigments: {}
+  react: {}
+  "smart-tab-name": {}
+  "symbols-tree-view": {}
+  tabs:
+    enableVcsColoring: true
+  tasks: {}
+  "tool-bar": {}
+  welcome:
+    showOnStartup: false
+".jade.source":
+  editor:
+    softWrap: true

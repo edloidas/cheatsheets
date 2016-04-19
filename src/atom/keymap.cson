@@ -1,0 +1,41 @@
+# Your keymap
+#
+# Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
+# to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/customizing-atom#customizing-key-bindings
+# * https://atom.io/docs/latest/advanced/keymaps
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it here:
+# https://github.com/bevry/cson#what-is-cson
+'atom-text-editor:not([mini])':
+	'ctrl-,': 'application:show-settings'
+	'ctrl-shift-M': 'markdown-preview:toggle'
+	'ctrl-\'': 'toggle-quotes:toggle'
+	'ctrl-shift-A c': 'git-plus:add-and-commit'
+	'ctrl-shift-A a': 'git-plus:add-all-and-commit'
+	'ctrl-shift-A p': 'git-plus:add-all-commit-and-push'
+	'alt-t r': 'tern:rename'
+'atom-text-editor':
+	'alt-g l': 'git-log:show'
+	'alt-g b': 'git-blame:toggle'
+	'alt-g c': 'git-control:toggle'
+	'alt-g t': 'git-time-machine:toggle'
+	'alt-g d': 'git-diff-details:toggle-git-diff-details'
+'atom-workspace':
+	'ctrl-alt-t': 'atom-terminal-panel:toggle'

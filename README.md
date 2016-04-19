@@ -7,4 +7,4 @@ Service generates printable (A4 of different orientation) cheat sheet from the k
 
 ___
 
-* [Atom](src/atom/ATOM.md)
+* [Atom](src/atom/ATOM.md) - a hackable text editor
