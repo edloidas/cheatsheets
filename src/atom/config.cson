@@ -6,6 +6,9 @@
   "atom-alignment": {}
   "atom-css-comb": {}
   "atom-csscomb": {}
+  "atom-fuzzy-grep":
+    grepCommandString: "git grep -i --no-color -n -E"
+    inputThrottle: 200
   "atom-terminal-panel":
     WindowHeight: 450
     statusBarText: "%(dynamic) %(username) [%(hours):%(minutes):%(seconds)]"
@@ -67,6 +70,9 @@
   pigments: {}
   react: {}
   "smart-tab-name": {}
+  "split-diff":
+    ignoreWhitespace: true
+    syncHorizontalScroll: true
   "symbols-tree-view": {}
   tabs:
     enableVcsColoring: true
