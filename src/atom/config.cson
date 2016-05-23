@@ -12,6 +12,10 @@
   "atom-terminal-panel":
     WindowHeight: 450
     statusBarText: "%(dynamic) %(username) [%(hours):%(minutes):%(seconds)]"
+  "atom-ternjs":
+    displayAboveSnippets: true
+    useSnippets: true
+    useSnippetsAndFunction: true
   blame:
     defaultWidth: 280
   core:
@@ -38,9 +42,10 @@
   "css-comb": {}
   editor:
     fontFamily: "Hack"
-    fontSize: 15
+    fontSize: 16
     invisibles: {}
     showInvisibles: true
+    softWrap: true
     tabType: "soft"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
@@ -61,6 +66,8 @@
       "find-and-replaceDecorationsZIndex": 0
       "git-diff": true
       "git-diffDecorationsZIndex": 0
+  "mocha-test-runner":
+    nodeBinaryPath: "C:\\nodejs\\node.exe"
   nuclide:
     remoteProjectsConfig: []
   "nuclide-file-tree": {}

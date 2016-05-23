@@ -31,11 +31,12 @@
 	'ctrl-shift-A a': 'git-plus:add-all-and-commit'
 	'ctrl-shift-A p': 'git-plus:add-all-commit-and-push'
 	'alt-t r': 'tern:rename'
+'atom-workspace':
+	'ctrl-alt-t': 'atom-terminal-panel:toggle'
+	'alt-n m': 'mocha-test-runner:run'
 'atom-text-editor':
 	'alt-g l': 'git-log:show'
 	'alt-g b': 'git-blame:toggle'
 	'alt-g c': 'git-control:toggle'
 	'alt-g t': 'git-time-machine:toggle'
 	'alt-g d': 'git-diff-details:toggle-git-diff-details'
-'atom-workspace':
-	'ctrl-alt-t': 'atom-terminal-panel:toggle'
