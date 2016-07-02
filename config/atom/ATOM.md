@@ -2,14 +2,12 @@
 
 [Atom](https://atom.io/) is a hackable text editor for the 21st Century.
 
-
 [Cheat Sheet](https://edloidas.com/cheatsheets/atom/) - direct link to the cheat sheet. `!` Not implemented yet.
 
 #### Configuration ####
 
 * [`config.cson`](config.cson)
 * [`keymap.cson`](keymap.cson)
-
 
 #### Links ####
 
