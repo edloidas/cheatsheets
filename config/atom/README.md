@@ -6,8 +6,9 @@
 
 #### Configuration ####
 
-* [`config.cson`](config.cson)
-* [`keymap.cson`](keymap.cson)
+* [`config.cson`](config.cson) - global configuration
+* [`keymap.cson`](keymap.cson) - overwritten key bindings
+* [`styles.less`](styles.less) - overwritten styles for themes
 
 #### Links ####
 
