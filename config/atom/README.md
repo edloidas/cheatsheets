@@ -10,6 +10,10 @@
 * [`keymap.cson`](keymap.cson) - overwritten key bindings
 * [`styles.less`](styles.less) - overwritten styles for themes
 
+#### Tools ####
+
+Run `init_atom.[sh/bat]` script to update your Atom editor with current configuration.
+
 #### Links ####
 
 * [Hack](http://sourcefoundry.org/hack/) - monospace typeface
