@@ -7,7 +7,6 @@
   "atom-css-comb": {}
   "atom-csscomb": {}
   "atom-fuzzy-grep":
-    grepCommandString: "git grep -i --no-color -n -E"
     inputThrottle: 200
   "atom-terminal-panel":
     WindowHeight: 450
@@ -21,6 +20,8 @@
   core:
     disabledPackages: [
       "autocomplete-paths"
+      "react"
+      "linter-csslint"
     ]
     ignoredNames: [
       ".git"
@@ -28,6 +29,8 @@
       "._*"
       "Thumbs.db"
       "node_modules"
+      "target"
+      ".atom"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
@@ -35,6 +38,7 @@
       "git-time-machine"
       "git-blame"
     ]
+    projectHome: "D:\\repo"
     themes: [
       "one-dark-ui"
       "base16-tomorrow-dark-theme"
@@ -44,6 +48,7 @@
     fontFamily: "Hack"
     fontSize: 16
     invisibles: {}
+    showIndentGuide: true
     showInvisibles: true
     softWrap: true
     tabType: "soft"
@@ -66,6 +71,8 @@
       "find-and-replaceDecorationsZIndex": 0
       "git-diff": true
       "git-diffDecorationsZIndex": 0
+      "split-diff": true
+      "split-diffDecorationsZIndex": 0
   "mocha-test-runner":
     nodeBinaryPath: "C:\\nodejs\\node.exe"
   nuclide:
@@ -76,9 +83,15 @@
     showMemory: true
   pigments: {}
   react: {}
+  "save-session":
+    dataSaveFolder: "C:\\Users\\edloidas\\.atom\\packages\\save-session\\projects"
+    skipSavePrompt: false
   "smart-tab-name": {}
   "split-diff":
+    diffWords: true
     ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
     syncHorizontalScroll: true
   "symbols-tree-view": {}
   tabs:
