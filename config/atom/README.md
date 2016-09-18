@@ -4,6 +4,8 @@
 
 [Cheat Sheet](https://edloidas.com/cheatsheets/atom/) - direct link to the cheat sheet. `!` Not implemented yet.
 
+[CheatSheet.md](CHEATSHEET.md) - cheat sheet in Markdown format. Editor key map and installed packages.
+
 #### Configuration ####
 
 * [`config.cson`](config.cson) - global configuration
