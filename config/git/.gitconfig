@@ -1,0 +1,15 @@
+[push]
+	default = simple
+[credential]
+	helper = wincred
+[color]
+	ui = true
+[core]
+	autocrlf = true
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
+	del = branch -D
+	new = checkout -b
+	gud = commit --amend
