@@ -3,8 +3,15 @@ Cheat Sheets
 
 > A compilation of Cheat Sheets and Configurations various types of tools and editors.
 
-Service generates printable (A4 of different orientation) cheat sheet from the keymap/config file of the tool/editor. Each tool/editor has set of configuration files that can be downloaded.
+Project stores configurations for different projects. Each tool/editor has set of configuration files that can be downloaded. There are also a scripts that will help to apply some of the configurations.
 
 ___
 
-* [Atom](src/atom/ATOM.md) - a hackable text editor
+* [Atom](config/atom/README.md) - a hackable text editor.
+* [cmder](config/cmder/README.md) - a lovely console emulator package for Windows.
+* [git](config/git/README.md) - a distributed version control system.
+* [tern](config/tern/README.md) - stand-alone code-analysis engine for JavaScript.
+
+## License ##
+
+[MIT](LICENSE) © [Mikita Taukachou](https://edloidas.com)
