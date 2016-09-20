@@ -6,7 +6,7 @@
 
 * [`.gitignore`](.gitignore) - basic config without user name and email.
 
-If you just want to copy configuration without scripts, don't forget to set the user name and email like this:
+If you copied the configuration by hands, don't forget to set the user name and email like this:
 
 ```
 git config --global user.name "John Doe"
@@ -24,3 +24,5 @@ _init.sh [user.name] [user.email]
 ```
 
 If one or both arguments are missing, you will be asked enter them.
+
+The resulted configuration will be placed under the HOME directory.
