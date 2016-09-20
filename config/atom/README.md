@@ -14,7 +14,9 @@
 
 #### Tools ####
 
-Run `init_atom.[sh/bat]` script to update your Atom editor with current configuration.
+Run `_init.[sh/bat]` script to update your Atom editor with the current configuration.
+
+The resulted configuration will be placed under the HOME directory.
 
 #### Links ####
 
