@@ -7,9 +7,42 @@
 [core]
 	autocrlf = true
 [alias]
+	#
+	# Inspection and Comparison
+	#
+
+	# Log commits to the current branch in short format
+	# (branch entry) (hash, 7 digits) (commit message header)
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	# Same as `lol` but for all branches
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
+	#
+	# Branching and Merging
+	#
+
+	# Get the current branch name (used in other aliases)
+	branch-name = rev-parse --abbrev-ref HEAD
+	# Push the current branch to the remote "origin", and set it to track
+	# the upstream branch
+	publish = "!git push -u origin $(git branch-name)"
+	# Delete the remote version of the current branch
+	unpublish = "!git push origin :$(git branch-name)"
+	# Delete a branch and recreate it from master — useful if you have, dev
+	# and a master branch and they could conceivably go out of sync
+	recreate = "!f() { [[ -n $@ ]] && git checkout \"$@\" && git unpublish && git checkout master && git branch -D \"$@\" && git checkout -b \"$@\" && git publish; }; f"
+	# Force delete branch
 	del = branch -D
+	# Create new branch from current and switch to it
 	new = checkout -b
+	# Update previous commit with staged changes
 	gud = commit --amend
+
+	#
+	# Basic Snapshotting
+	#
+
+	# Unstage any files that have been added to the staging area
+	unstage = reset HEAD
+	# Show changes that have been staged
+	diffc = diff --cached

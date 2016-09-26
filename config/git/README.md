@@ -26,3 +26,9 @@ _init.sh [user.name] [user.email]
 If one or both arguments are missing, you will be asked enter them.
 
 The resulted configuration will be placed under the HOME directory.
+
+#### Attribution ####
+
+* `git lola` by [Conrad Parker](http://blog.kfish.org/2010/04/git-lola.html)
+* @robmiller with [.gitconfig](https://gist.github.com/robmiller/6018582)
+* [Pro Git](https://git-scm.com/book/en/v2) book by Scott Chacon and Ben Straub 
