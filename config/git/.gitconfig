@@ -32,7 +32,7 @@
 	# and a master branch and they could conceivably go out of sync
 	recreate = "!f() { [[ -n $@ ]] && git checkout \"$@\" && git unpublish && git checkout master && git branch -D \"$@\" && git checkout -b \"$@\" && git publish; }; f"
 	# Checkout another branch (master by default) and remove the branch
-  # you was previously on. Can't remove master or the current branch.
+	# you was previously on. Can't remove master or the current branch.
 	return = "!f() { PREV=$(git branch-name) && CURR=${1:-\"master\"} && if [[ $PREV == \"master\" ]]; then echo \"Can't remove 'master' branch.\"; elif [[ $PREV == $CURR ]]; then echo \"Already on '$PREV'.\"; else git checkout \"$CURR\" && git del \"$PREV\"; fi }; f"
 	# Force delete branch
 	del = branch -D
