@@ -1,14 +1,4 @@
-# Directories #
-
-bower_components/
-node_modules/
-coverage/
-public/
-
-
-# Files #
-
-.publish
+.credentials
 npm-debug.log
 
 .DS_Store
