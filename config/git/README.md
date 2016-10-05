@@ -4,7 +4,7 @@
 
 #### Configuration ####
 
-* [`.gitignore`](.gitignore) - basic config without user name and email.
+* [`.gitconfig`](.gitconfig) - basic config without user name and email.
 
 If you copied the configuration by hands, don't forget to set the user name and email like this:
 
