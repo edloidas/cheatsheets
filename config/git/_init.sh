@@ -27,7 +27,7 @@ cat $GIT_TEMPLATE >> $GIT
 
 # save credentials
 echo SAVED_NAME=$NAME>$CRED
-echo SAVED_EMAIL=$EMAIL>$CRED
+echo SAVED_EMAIL=$EMAIL>>$CRED
 
 echo "Created .gitconfig for ( $NAME : $EMAIL )"
 
