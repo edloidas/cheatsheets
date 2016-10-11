@@ -37,5 +37,7 @@ SAVED_EMAIL=useremail@example.com
 #### Attribution ####
 
 * `git lola` by [Conrad Parker](http://blog.kfish.org/2010/04/git-lola.html)
-* @robmiller with [.gitconfig](https://gist.github.com/robmiller/6018582)
+* @robmiller with [.gitconfig](https://gist.github.com/robmiller/6018582) (_modified_)
+* `git recap` and `git today` by [Harry Roberts & Mike Street](https://twitter.com/csswizardry/status/784399286050156544) (_modified_)
+* [Changing a commit message](https://help.github.com/articles/changing-a-commit-message/) by GitHub
 * [Pro Git](https://git-scm.com/book/en/v2) book by Scott Chacon and Ben Straub

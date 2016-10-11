@@ -8,6 +8,15 @@
 	autocrlf = input
 [alias]
 	#
+	# Utilities
+	#
+
+	# Get your email
+	author = config user.email
+	# Get the current branch name (used in other aliases)
+	branch-name = rev-parse --abbrev-ref HEAD
+
+	#
 	# Inspection and Comparison
 	#
 
@@ -16,13 +25,15 @@
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	# Same as `lol` but for all branches
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	# Log all your commits in short form with date
+	recap = "!git log --author=$(git author) --oneline --no-merges --format='%h [%ad] %s' --date=short"
+	# Log all your commits for today in short form with relative date
+	today = "!git log --author=$(git author) --oneline --no-merges --format='%h [%ad] %s' --date=relative --since=1am"
 
 	#
 	# Branching and Merging
 	#
 
-	# Get the current branch name (used in other aliases)
-	branch-name = rev-parse --abbrev-ref HEAD
 	# Push the current branch to the remote "origin", and set it to track
 	# the upstream branch
 	publish = "!git push -u origin $(git branch-name)"
@@ -40,6 +51,8 @@
 	new = checkout -b
 	# Update previous commit with staged changes
 	gud = commit --amend
+	# Update and rebase previous commits. First argument is the number of commits (2 by default)
+	rework = "!f() { COUNT=${1:-\"2\"} && git rebase -i HEAD~$COUNT; }; f"
 
 	#
 	# Basic Snapshotting
@@ -49,3 +62,10 @@
 	unstage = reset HEAD
 	# Show changes that have been staged
 	diffc = diff --cached
+
+	#
+	# Sharing and Updating
+	#
+
+	# Set the default remote branch for the current local branch and push
+	publish = "!git push -u origin $(git branch-name)"
