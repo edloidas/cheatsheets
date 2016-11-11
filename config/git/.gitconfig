@@ -64,10 +64,3 @@
 	unstage = reset HEAD
 	# Show changes that have been staged
 	diffc = diff --cached
-
-	#
-	# Sharing and Updating
-	#
-
-	# Set the default remote branch for the current local branch and push
-	publish = "!git push -u origin $(git branch-name)"
