@@ -17,6 +17,13 @@
 	branch-name = rev-parse --abbrev-ref HEAD
 
 	#
+	# Getting and Creating Projects
+	#
+
+	# Initialize your repository and create an empty root commit
+	it = "!git init && git commit -m \"root\" --allow-empty"
+
+	#
 	# Inspection and Comparison
 	#
 
@@ -31,6 +38,8 @@
 	today = "!git log --author=$(git author) --oneline --no-merges --format='%h [%ad] %s' --date=relative --since=1am"
 	# Same as `git today` (equals `git daysago 0`) but for a specific day from current day
 	daysago = "!f() { COUNT=${1:-\"2\"} && git recap --until=$COUNT.day --since=$((++COUNT)).day; }; f"
+	# Same as `git today` (equals `git daysago 0`) but for a specific day from current day
+	shorty = status --short --branch
 
 	#
 	# Branching and Merging
@@ -41,6 +50,9 @@
 	publish = "!git push -u origin $(git branch-name)"
 	# Delete the remote version of the current branch
 	unpublish = "!git push origin :$(git branch-name)"
+	# Log commits to the current branch in short format
+	# (branch entry) (hash, 7 digits) (commit message header)
+	please = push --force-with-lease
 	# Delete a branch and recreate it from master — useful if you have, dev
 	# and a master branch and they could conceivably go out of sync
 	recreate = "!f() { [[ -n $@ ]] && git checkout \"$@\" && git unpublish && git checkout master && git branch -D \"$@\" && git checkout -b \"$@\" && git publish; }; f"
@@ -52,9 +64,19 @@
 	# Create new branch from current and switch to it
 	new = checkout -b
 	# Update previous commit with staged changes
-	gud = commit --amend
+	gud = commit --amend --no-edit
+	# Same as `gud`, but also edit the commit message
+	commend = commit --amend
 	# Update and rebase previous commits. First argument is the number of commits (2 by default)
 	rework = "!f() { COUNT=${1:-\"2\"} && git rebase -i HEAD~$COUNT; }; f"
+	# Stash only unstaged changes to tracked files
+	stash0 = stash --keep-index
+	# Stash tracked files (default)
+	stash1 = stash
+	# Stash untracked and tracked files
+	stash2 = stash --include-untracked
+	# Stash ignored, untracked, and tracked files
+	stash3 = stash --all
 
 	#
 	# Basic Snapshotting
