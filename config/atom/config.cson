@@ -4,8 +4,6 @@
     createFileInstantly: true
     fuzzyMatch: true
   "atom-alignment": {}
-  "atom-css-comb": {}
-  "atom-csscomb": {}
   "atom-fuzzy-grep":
     inputThrottle: 200
   "atom-terminal-panel":
@@ -13,15 +11,38 @@
     statusBarText: "%(dynamic) %(username) [%(hours):%(minutes):%(seconds)]"
   "atom-ternjs":
     displayAboveSnippets: true
-    useSnippets: true
-    useSnippetsAndFunction: true
+    excludeLowerPriorityProviders: true
+    inlineFnCompletionDocumentation: true
+    sort: false
+    ternServerDependencyBudget: 30000
+  "autocomplete-flow":
+    pathToFlowExecutable: "c:/flow/flow"
+  "autocomplete-plus": {}
   blame:
     defaultWidth: 280
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
-      "autocomplete-paths"
-      "react"
       "linter-csslint"
+      "autocomplete-paths"
+      "node-debugger"
+      "emmet"
+      "atom-jade"
+      "atom-terminal-panel"
+      "git-diff-details"
+      "turbo-javascript"
     ]
     ignoredNames: [
       ".git"
@@ -39,6 +60,7 @@
       "git-blame"
     ]
     projectHome: "D:\\repo"
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "base16-tomorrow-dark-theme"
@@ -56,14 +78,27 @@
     promptWhenFileHasChangedOnDisk: false
   "git-blame":
     columnWidth: 270
+  "git-diff-details":
+    enableSyntaxHighlighting: true
   "git-plus": {}
   "highlight-selected":
     timeout: 100
+  "indentation-indicator":
+    indicatorPosition: "right"
+    spaceAfterColon: true
   "js-hyperclick": {}
+  "line-ending-selector":
+    defaultLineEnding: "LF"
   linter:
     errorPanelHeight: 26
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
+  "linter-flow":
+    executablePath: "c:/flow/flow"
+  "linter-flow-plus":
+    pathToFlowExecutable: "c:/flow/flow"
+    testRuleTwo: true
+  "linter-shellcheck": {}
   "merge-conflicts": {}
   minimap:
     plugins:
@@ -71,21 +106,14 @@
       "find-and-replaceDecorationsZIndex": 0
       "git-diff": true
       "git-diffDecorationsZIndex": 0
+      selection: true
+      selectionDecorationsZIndex: 0
       "split-diff": true
       "split-diffDecorationsZIndex": 0
   "mocha-test-runner":
     nodeBinaryPath: "C:\\nodejs\\node.exe"
-  nuclide:
-    remoteProjectsConfig: []
-  "nuclide-file-tree": {}
-  "nuclide-health":
-    showCpu: true
-    showMemory: true
   pigments: {}
   react: {}
-  "save-session":
-    dataSaveFolder: "C:\\Users\\edloidas\\.atom\\packages\\save-session\\projects"
-    skipSavePrompt: false
   "smart-tab-name": {}
   "split-diff":
     diffWords: true
