@@ -16,7 +16,7 @@ if [%NAME%]==[] set /p NAME="Enter user name: "
 if [%EMAIL%]==[] set /p EMAIL="Enter user email: "
 
 REM write .gitconfig
-set GIT=%HOME%\.gitconfig
+set GIT=%HOMEPATH%\.gitconfig
 set GIT_TEMPLATE=%~dp0.gitconfig
 
 echo [user]>%GIT%
@@ -28,4 +28,6 @@ REM save credentials
 echo SAVED_NAME=%NAME%>%CRED%
 echo SAVED_EMAIL=%EMAIL%>>%CRED%
 
+echo %GIT%
+echo %GIT_TEMPLATE%
 echo Created .gitconfig for ( %NAME% : %EMAIL% )
