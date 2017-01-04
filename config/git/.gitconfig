@@ -32,6 +32,8 @@
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	# Same as `lol` but for all branches
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	# Same as `lola` but also shows the discarded commits
+	lolr = "!git lola $(git reflog | cut -c1-7)"
 	# Log all your commits in short form with date
 	recap = "!git log --author=$(git author) --oneline --no-merges --format='%h [%ad] %s' --date=short"
 	# Log all your commits for today in short form with relative date
