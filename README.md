@@ -7,7 +7,6 @@ Project stores configurations for different projects. Each tool/editor has set o
 
 ___
 
-* [Atom](config/atom/README.md) - a hackable text editor.
 * [cmder](config/cmder/README.md) - a lovely console emulator package for Windows.
 * [git](config/git/README.md) - a distributed version control system.
 * [tern](config/tern/README.md) - stand-alone code-analysis engine for JavaScript.
