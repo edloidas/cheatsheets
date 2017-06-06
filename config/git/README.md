@@ -43,6 +43,7 @@ SAVED_EMAIL=useremail@example.com
 * `git recap` and `git today` by [Harry Roberts & Mike Street](https://twitter.com/csswizardry/status/784399286050156544) (_modified_)
 * `git please`, `git commend`, `git it`, `git shorty`, `git stash*` by [Tim Pettersen](https://hackernoon.com/lesser-known-git-commands-151a1918a60) (_modified_)
 * `git lolr` [post by Phil Nash](https://philna.sh/blog/2017/01/04/git-back-to-the-future/) and [tweet by Jake Archibald](https://twitter.com/jaffathecake/status/816595263733305344)  (_modified_)
+* `git checkout -` by [Zack Hall](https://twitter.com/ZTHall/status/785653842792714240) (_modified_)
 * [Oh shit, Git!](http://ohshitgit.com/) by Katie Sylor-Miller
 * [Changing a commit message](https://help.github.com/articles/changing-a-commit-message/) by GitHub
 * [Pro Git](https://git-scm.com/book/en/v2) book by Scott Chacon and Ben Straub

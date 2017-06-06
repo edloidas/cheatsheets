@@ -15,6 +15,8 @@
 	author = config user.email
 	# Get the current branch name (used in other aliases)
 	branch-name = rev-parse --abbrev-ref HEAD
+	# Get root of the current branch, that is connected
+	base = merge-base master HEAD
 
 	#
 	# Getting and Creating Projects
@@ -22,6 +24,9 @@
 
 	# Initialize your repository and create an empty root commit
 	it = "!git init && git commit -m \"root\" --allow-empty"
+	# Create a new branch with no parents and remove all files, except ignored ones
+	# Usefull to create branch for documentation, published to `gh-pages`
+	orphan = "!f() { NAME=${1:-\"orphan\"} && git checkout --orphan $NAME && git rm --cached -r . && git add .gitignore && git clean -fd; }; f"
 
 	#
 	# Inspection and Comparison
@@ -79,6 +84,8 @@
 	stash2 = stash --include-untracked
 	# Stash ignored, untracked, and tracked files
 	stash3 = stash --all
+	# Switch to previously active branch
+	back = checkout -
 
 	#
 	# Basic Snapshotting
@@ -88,3 +95,5 @@
 	unstage = reset HEAD
 	# Show changes that have been staged
 	diffc = diff --cached
+	# Show changed files
+	diffb = diff --name-only origin/master
