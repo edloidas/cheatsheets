@@ -44,7 +44,7 @@
 	# Log all your commits for today in short form with relative date
 	today = "!git log --author=$(git author) --oneline --no-merges --format='%h [%ad] %s' --date=relative --since=1am"
 	# Same as `git today` (equivalent is `git daysago 0`) but for a specific day
-  # (1 day ago by default) from current day.
+	# (1 day ago by default) from current day.
 	daysago = "!f() { COUNT=${1:-\"0\"} && git recap --until=$COUNT.day --since=$((++COUNT)).day; }; f"
 	# Parsable, machine-readable `git status`
 	shorty = status --short --branch
@@ -58,7 +58,7 @@
 	# Delete the remote version of the current branch
 	unpublish = "!git push origin :$(git branch-name)"
 	# Forcefully update a remote ref only if upstream ref is what we expect, i.e.
-  # nobody has updated the branch upstream
+	# nobody has updated the branch upstream
 	please = push --force-with-lease
 	# Delete a branch and recreate it from master — useful if you have, dev
 	# and a master branch and they could conceivably go out of sync
