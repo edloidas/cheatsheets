@@ -15,7 +15,7 @@
 	author = config user.email
 	# Get the current branch name (used in other aliases)
 	branch-name = rev-parse --abbrev-ref HEAD
-	# Get root of the current branch, that is connected
+	# Get hash of the last common commit with master branch
 	base = merge-base master HEAD
 
 	#
@@ -25,7 +25,7 @@
 	# Initialize your repository and create an empty root commit
 	it = "!git init && git commit -m \"root\" --allow-empty"
 	# Create a new branch with no parents and remove all files, except ignored ones
-	# Usefull to create branch for documentation, published to `gh-pages`
+	# Useful when creating branch for documentation and publishing as `gh-pages`
 	orphan = "!f() { NAME=${1:-\"orphan\"} && git checkout --orphan $NAME && git rm --cached -r . && git add .gitignore && git clean -fd; }; f"
 
 	#
@@ -43,22 +43,22 @@
 	recap = "!git log --author=$(git author) --oneline --no-merges --format='%h [%ad] %s' --date=short"
 	# Log all your commits for today in short form with relative date
 	today = "!git log --author=$(git author) --oneline --no-merges --format='%h [%ad] %s' --date=relative --since=1am"
-	# Same as `git today` (equals `git daysago 0`) but for a specific day from current day
-	daysago = "!f() { COUNT=${1:-\"2\"} && git recap --until=$COUNT.day --since=$((++COUNT)).day; }; f"
-	# Same as `git today` (equals `git daysago 0`) but for a specific day from current day
+	# Same as `git today` (equivalent is `git daysago 0`) but for a specific day
+  # (1 day ago by default) from current day.
+	daysago = "!f() { COUNT=${1:-\"0\"} && git recap --until=$COUNT.day --since=$((++COUNT)).day; }; f"
+	# Parsable, machine-readable `git status`
 	shorty = status --short --branch
 
 	#
 	# Branching and Merging
 	#
 
-	# Push the current branch to the remote "origin", and set it to track
-	# the upstream branch
+	# Push the current branch to the remote "origin"and set it to track the upstream branch
 	publish = "!git push -u origin $(git branch-name)"
 	# Delete the remote version of the current branch
 	unpublish = "!git push origin :$(git branch-name)"
-	# Log commits to the current branch in short format
-	# (branch entry) (hash, 7 digits) (commit message header)
+	# Forcefully update a remote ref only if upstream ref is what we expect, i.e.
+  # nobody has updated the branch upstream
 	please = push --force-with-lease
 	# Delete a branch and recreate it from master — useful if you have, dev
 	# and a master branch and they could conceivably go out of sync
