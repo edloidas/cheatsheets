@@ -38,15 +38,18 @@
 
 	# Log commits to the current branch in short format
 	# (branch entry) (hash, 7 digits) (commit message header)
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	# `--oneline` replaces `--pretty=oneline --abbrev-commit`
+	lol = log --graph --decorate --oneline
 	# Same as `lol` but for all branches
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lola = "!git lol --all"
 	# Same as `lola` but also shows the discarded commits
 	lolr = "!git lola $(git reflog | cut -c1-7)"
 	# Log all your commits in short form with date
-	recap = "!git log --author=$(git author) --oneline --no-merges --format='%h [%ad] %s' --date=short"
+	# Format without colors: '%h [%ad] %s'
+	recap = "!git log --author=$(git author) --oneline --no-merges --format='%C(Yellow)%h%Creset %C(Cyan)[%ad]%Creset %s' --date=short"
 	# Log all your commits for today in short form with relative date
-	today = "!git log --author=$(git author) --oneline --no-merges --format='%h [%ad] %s' --date=relative --since=1am"
+	# Format without colors: '%h [%ad] %s'
+	today = "!git log --author=$(git author) --oneline --no-merges --format='%C(Yellow)%h%Creset %C(Cyan)[%ad]%Creset %s' --date=relative --since=1am"
 	# Same as `git today` (equivalent is `git daysago 0`) but for a specific day
 	# (1 day ago by default) from current day.
 	daysago = "!f() { COUNT=${1:-\"1\"} && git recap --until=$COUNT.day --since=$((++COUNT)).day; }; f"
