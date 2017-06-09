@@ -80,6 +80,8 @@
 	commend = commit --amend
 	# Update and rebase previous commits. First argument is the number of commits (2 by default)
 	rework = "!f() { COUNT=${1:-\"2\"} && git rebase -i HEAD~$COUNT; }; f"
+	# Interactively rebase all the commits on the current branch
+	rework-branch = "!git rebase -i $(git base)"
 	# Stash only unstaged changes to tracked files
 	stash0 = stash --keep-index
 	# Stash tracked files (default)
@@ -91,9 +93,9 @@
 	# Switch to previously active branch
 	back = checkout -
 	# Find the commits that were introduced by a merge
-	merge-log = "!git lol `git merge-span .. $1`"
+	merge-log = "!git lol $(git merge-span .. $1)"
 	# Show the changes that were introduced by a merge
-	merge-diff = "!git diff `git merge-span ... $1`"
+	merge-diff = "!git diff $(git merge-span ... $1)"
 
 	#
 	# Basic Snapshotting
