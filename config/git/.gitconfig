@@ -37,8 +37,9 @@
 	#
 
 	# Log commits to the current branch in short format
-	# `--oneline` replaces `--pretty=oneline --abbrev-commit`
-	lol = log --graph --decorate --oneline --format='%C(Yellow)%h%Creset %s %C(Cyan)(%cr)%Creset %C(Magenta)<%an>%Creset'
+	#   `--oneline` equals `--pretty=oneline --abbrev-commit`
+	#   `--format=...` replaces `--decorate`
+	lol = log --graph --oneline --format='%C(auto)%h %s%d %C(Cyan)[%cr] %C(Magenta)<%an>'
 	# Same as `lol` but for all branches
 	lola = "!git lol --all"
 	# Same as `lola` but also shows the discarded commits
