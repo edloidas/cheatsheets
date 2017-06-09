@@ -46,6 +46,7 @@ SAVED_EMAIL=useremail@example.com
 * `lolr` [post by Phil Nash](https://philna.sh/blog/2017/01/04/git-back-to-the-future/) and [tweet by Jake Archibald](https://twitter.com/jaffathecake/status/816595263733305344)  (_modified_)
 * `git checkout -` by [Zack Hall](https://twitter.com/ZTHall/status/785653842792714240) (_modified_)
 * `hide`, `unhide`, `unhide-all`, `hidden`, `ignored` by [ryenus](https://stackoverflow.com/a/37083903/1478194) and others
+* `sclone` by [Paul Irish](https://github.com/paulirish/dotfiles/blob/master/.gitconfig)
 * [Oh shit, Git!](http://ohshitgit.com/) by Katie Sylor-Miller
 * [Changing a commit message](https://help.github.com/articles/changing-a-commit-message/) by GitHub
 * [Pro Git](https://git-scm.com/book/en/v2) book by Scott Chacon and Ben Straub

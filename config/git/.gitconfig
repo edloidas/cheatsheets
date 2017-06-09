@@ -29,6 +29,8 @@
 	# Create a new branch with no parents and remove all files, except ignored ones
 	# Useful when creating branch for documentation and publishing as `gh-pages`
 	orphan = "!f() { NAME=${1:-\"orphan\"} && git checkout --orphan $NAME && git rm --cached -r . && git add .gitignore && git clean -fd; }; f"
+	# Create a shallow clone with a history truncated to 1 commit
+	sclone = clone --depth 1
 
 	#
 	# Inspection and Comparison
@@ -74,6 +76,8 @@
 	del = branch -D
 	# Create new branch from current and switch to it
 	new = checkout -b
+	# Add all and commit with message
+	c = commit -am
 	# Update previous commit with staged changes
 	gud = commit --amend --no-edit
 	# Same as `gud`, but also edit the commit message
