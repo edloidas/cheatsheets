@@ -95,5 +95,11 @@
 	unstage = reset HEAD
 	# Show changes that have been staged
 	diffc = diff --cached
-	# Show changed files
-	diffb = diff --name-only origin/master
+	# Show list of changed files that differ from "origin/master"
+	diffm = diff --name-only origin/master
+	# Highlight modified symbols, not lines
+	# Useful for minified files, since they are usually one-liners
+	diffmin = diff --word-diff-regex=.
+	# Highlight modified symbols using only colors
+	# Similar to `diffmin`, but has color flag `--word-diff=color --word-diff-regex=.`
+	diffminc = diff --color-words=.
