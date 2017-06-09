@@ -38,13 +38,14 @@ SAVED_EMAIL=useremail@example.com
 
 #### Attribution ####
 
-* `git lola` by [Conrad Parker](http://blog.kfish.org/2010/04/git-lola.html)
+* `lola` by [Conrad Parker](http://blog.kfish.org/2010/04/git-lola.html)
 * @robmiller with [.gitconfig](https://gist.github.com/robmiller/6018582) (_modified_)
-* `git recap` and `git today` by [Harry Roberts & Mike Street](https://twitter.com/csswizardry/status/784399286050156544) (_modified_)
-* `git diffmin` by [Harry Roberts](https://twitter.com/csswizardry/status/867676530780065792)
-* `git please`, `git commend`, `git it`, `git shorty`, `git stash*` by [Tim Pettersen](https://hackernoon.com/lesser-known-git-commands-151a1918a60) (_modified_)
-* `git lolr` [post by Phil Nash](https://philna.sh/blog/2017/01/04/git-back-to-the-future/) and [tweet by Jake Archibald](https://twitter.com/jaffathecake/status/816595263733305344)  (_modified_)
+* `recap` and `today` by [Harry Roberts & Mike Street](https://twitter.com/csswizardry/status/784399286050156544) (_modified_)
+* `diffmin` by [Harry Roberts](https://twitter.com/csswizardry/status/867676530780065792)
+* `please`, `commend`, `it`, `shorty`, `stash*` by [Tim Pettersen](https://hackernoon.com/lesser-known-git-commands-151a1918a60) (_modified_)
+* `lolr` [post by Phil Nash](https://philna.sh/blog/2017/01/04/git-back-to-the-future/) and [tweet by Jake Archibald](https://twitter.com/jaffathecake/status/816595263733305344)  (_modified_)
 * `git checkout -` by [Zack Hall](https://twitter.com/ZTHall/status/785653842792714240) (_modified_)
+* `hide`, `unhide`, `unhide-all`, `hidden`, `ignored` by [ryenus](https://stackoverflow.com/a/37083903/1478194) and others
 * [Oh shit, Git!](http://ohshitgit.com/) by Katie Sylor-Miller
 * [Changing a commit message](https://help.github.com/articles/changing-a-commit-message/) by GitHub
 * [Pro Git](https://git-scm.com/book/en/v2) book by Scott Chacon and Ben Straub

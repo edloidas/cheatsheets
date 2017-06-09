@@ -97,6 +97,8 @@
 	unstage = reset HEAD
 	# Show changes that have been staged
 	diffc = diff --cached
+	# Show list of changed files
+	diffn = diff --name-only
 	# Show list of changed files that differ from "origin/master"
 	diffm = diff --name-only origin/master
 	# Highlight modified symbols, not lines
@@ -105,3 +107,19 @@
 	# Highlight modified symbols using only colors
 	# Similar to `diffmin`, but has color flag `--word-diff=color --word-diff-regex=.`
 	diffminc = diff --color-words=.
+
+	#
+	# Plumbing Commands
+	#
+
+	# Stop tracking the file changes: `git hide <filename>`
+	hide = update-index --assume-unchanged
+	# Resume tracking the file changes: `git unhide <filename>`
+	unhide = update-index --no-assume-unchanged
+	# Resume tracking all the hidden files
+	# Won't resume tracking the files, that wasn't modified but was hidden
+	unhide-all = update-index --really-refresh
+	# Show list of hidden files
+	hidden = "!git ls-files -v | grep '^[[:lower:]]'"
+	# Show list of ignored files files
+	ignored = "!git status -s --ignored | grep '^!!'"
