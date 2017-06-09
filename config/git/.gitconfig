@@ -45,7 +45,7 @@
 	today = "!git log --author=$(git author) --oneline --no-merges --format='%h [%ad] %s' --date=relative --since=1am"
 	# Same as `git today` (equivalent is `git daysago 0`) but for a specific day
 	# (1 day ago by default) from current day.
-	daysago = "!f() { COUNT=${1:-\"0\"} && git recap --until=$COUNT.day --since=$((++COUNT)).day; }; f"
+	daysago = "!f() { COUNT=${1:-\"1\"} && git recap --until=$COUNT.day --since=$((++COUNT)).day; }; f"
 	# Parsable, machine-readable `git status`
 	shorty = status --short --branch
 
