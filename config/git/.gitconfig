@@ -120,6 +120,9 @@
 	# Highlight modified symbols using only colors
 	# Similar to `diffmin`, but has color flag `--word-diff=color --word-diff-regex=.`
 	diffminc = diff --color-words=.
+	# Resets the index and working tree.
+	# Any changes to tracked files in the working tree since HEAD commit are discarded.
+	die = reset --hard HEAD
 
 	#
 	# Plumbing Commands
