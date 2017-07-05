@@ -55,6 +55,8 @@
 	shorty = status --short --branch
 	# Shortened `git status`
 	s = status
+	# Shortened `git checkoutt`
+	ch = checkout
 
 	#
 	# Branching and Merging
