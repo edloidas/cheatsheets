@@ -47,6 +47,7 @@ SAVED_EMAIL=useremail@example.com
 * `git checkout -` by [Zack Hall](https://twitter.com/ZTHall/status/785653842792714240) (_modified_)
 * `hide`, `unhide`, `unhide-all`, `hidden`, `ignored` by [ryenus](https://stackoverflow.com/a/37083903/1478194) and others
 * `sclone` by [Paul Irish](https://github.com/paulirish/dotfiles/blob/master/.gitconfig)
+* `unshallow` based on steps from [Stack Overflow](https://stackoverflow.com/a/27393574/1478194)
 * [Oh shit, Git!](http://ohshitgit.com/) by Katie Sylor-Miller
 * [Changing a commit message](https://help.github.com/articles/changing-a-commit-message/) by GitHub
 * [Pro Git](https://git-scm.com/book/en/v2) book by Scott Chacon and Ben Straub

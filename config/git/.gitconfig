@@ -103,6 +103,9 @@
 	merge-log = "!git lol $(git merge-span .. $1)"
 	# Show the changes that were introduced by a merge
 	merge-diff = "!git diff $(git merge-span ... $1)"
+	# Updates fetch command to accept refs from * (all) branches, not only from master
+	# (or any other branch used with `--single-branch`) and fetches unshallow copy of the repo
+	unshallow = "!git remote set-branches origin '*' && git fetch --unshallow --verbose"
 
 	#
 	# Basic Snapshotting
