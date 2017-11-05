@@ -51,17 +51,19 @@
 	# Same as `git today` (equivalent is `git daysago 0`) but for a specific day
 	# (1 day ago by default) from current day.
 	daysago = "!f() { COUNT=${1:-\"1\"} && git recap --until=$COUNT.day --since=$((++COUNT)).day; }; f"
-	# Parsable, machine-readable `git status`
-	shorty = status --short --branch
-	# Shortened `git status`
-	s = status
-	# Shortened `git checkoutt`
-	ch = checkout
 
 	#
 	# Branching and Merging
 	#
 
+	# Shortened `git checkoutt`
+	ch = checkout
+	# Switch to previously active branch
+	back = checkout -
+	# Create new branch from current and switch to it
+	new = checkout -b
+	# Force delete branch
+	del = branch -D
 	# Push the current branch to the remote "origin"and set it to track the upstream branch
 	publish = "!git push -u origin $(git branch-name)"
 	# Delete the remote version of the current branch
@@ -75,16 +77,6 @@
 	# Checkout another branch (master by default) and remove the branch
 	# you was previously on. Can't remove master or the current branch.
 	return = "!f() { PREV=$(git branch-name) && CURR=${1:-\"master\"} && if [[ $PREV == \"master\" ]]; then echo \"Can't remove 'master' branch.\"; elif [[ $PREV == $CURR ]]; then echo \"Already on '$PREV'.\"; else git checkout \"$CURR\" && git del \"$PREV\"; fi }; f"
-	# Force delete branch
-	del = branch -D
-	# Create new branch from current and switch to it
-	new = checkout -b
-	# Add all and commit with message
-	c = commit -am
-	# Update previous commit with staged changes
-	gud = commit --amend --no-edit
-	# Same as `gud`, but also edit the commit message
-	commend = commit --amend
 	# Update and rebase previous commits. First argument is the number of commits (2 by default)
 	rework = "!f() { COUNT=${1:-\"2\"} && git rebase -i HEAD~$COUNT; }; f"
 	# Interactively rebase all the commits on the current branch
@@ -97,8 +89,6 @@
 	stash2 = stash --include-untracked
 	# Stash ignored, untracked, and tracked files
 	stash3 = stash --all
-	# Switch to previously active branch
-	back = checkout -
 	# Find the commits that were introduced by a merge
 	merge-log = "!git lol $(git merge-span .. $1)"
 	# Show the changes that were introduced by a merge
@@ -111,6 +101,16 @@
 	# Basic Snapshotting
 	#
 
+	# Shortened `git status`
+	s = status
+	# Parsable, machine-readable `git status`
+	shorty = status --short --branch
+	# Add all and commit with message
+	c = commit -am
+	# Update previous commit with staged changes
+	gud = commit --amend --no-edit
+	# Same as `gud`, but also edit the commit message
+	commend = commit --amend
 	# Unstage any files that have been added to the staging area
 	unstage = reset HEAD
 	# Show changes that have been staged
