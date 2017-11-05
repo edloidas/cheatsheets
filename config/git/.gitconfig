@@ -117,6 +117,8 @@
 	commend = commit --amend
 	# Unstage any files that have been added to the staging area
 	unstage = reset HEAD
+	# Do commit with changes, that will revert changes of the specified commit (HEAD by default)
+	undo = "!f() { COMMIT=${1:-\"HEAD\"} && git revert --no-edit $COMMIT; }; f"
 	# Show changes that have been staged
 	diffc = diff --cached
 	# Show list of changed files
