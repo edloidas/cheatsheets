@@ -13,6 +13,8 @@
 
 	# Get your email
 	author = config user.email
+	# Get the current commit hash (used in other aliases)
+	commit-hash = rev-parse HEAD
 	# Get the current branch name (used in other aliases)
 	branch-name = rev-parse --abbrev-ref HEAD
 	# Get hash of the last common commit with master branch
@@ -65,7 +67,7 @@
 	# Force delete branch
 	del = branch -D
 	# Link current branch to the specific commit
-	move = "!git branch -f $(git branch-name)"
+	move = "!f() { COMMIT=${1:-\"HEAD~1\"} && BRANCH=$(git branch-name) && git checkout $(git commit-hash) && git branch -f $BRANCH $COMMIT && git stash && git checkout $BRANCH && echo \"\nUse 'git stash pop', if you had uncommited changes.\"; }; f"
 	# Push the current branch to the remote "origin"and set it to track the upstream branch
 	publish = "!git push -u origin $(git branch-name)"
 	# Delete the remote version of the current branch
