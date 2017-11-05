@@ -64,6 +64,8 @@
 	new = checkout -b
 	# Force delete branch
 	del = branch -D
+	# Link current branch to the specific commit
+	move = "!git branch -f $(git branch-name)"
 	# Push the current branch to the remote "origin"and set it to track the upstream branch
 	publish = "!git push -u origin $(git branch-name)"
 	# Delete the remote version of the current branch
