@@ -66,6 +66,8 @@
 	new = checkout -b
 	# Force delete branch
 	del = branch -D
+	# Create a new branch by adding a timestamp to the current branch name
+	bkp = "!git branch $(git branch-name)_$(date +%Y%m%d-%H%M%S)"
 	# Link current branch to the specific commit
 	move = "!f() { COMMIT=${1:-\"HEAD~1\"} && BRANCH=$(git branch-name) && git checkout $(git commit-hash) && git branch -f $BRANCH $COMMIT && git stash && git checkout $BRANCH && echo \"\nUse 'git stash pop', if you had uncommited changes.\"; }; f"
 	# Push the current branch to the remote "origin"and set it to track the upstream branch
