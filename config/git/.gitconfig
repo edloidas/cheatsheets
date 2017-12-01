@@ -58,14 +58,18 @@
 	# Branching and Merging
 	#
 
-	# Shortened `git checkoutt`
+	# Shortened `git checkout`
 	ch = checkout
+	# Switch to master branch
+	chm = checkout master
 	# Switch to previously active branch
 	back = checkout -
 	# Create new branch from current and switch to it
 	new = checkout -b
 	# Force delete branch
 	del = branch -D
+	# Shortened `git branch`
+	b = branch
 	# Create a new branch by adding a timestamp to the current branch name
 	bkp = "!git branch $(git branch-name)_$(date +%Y%m%d-%H%M%S)"
 	# Link current branch to the specific commit
