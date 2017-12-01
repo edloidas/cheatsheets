@@ -116,7 +116,7 @@
 	# Parsable, machine-readable `git status`
 	shorty = status --short --branch
 	# Add all and commit with message
-	c = commit -am
+	c = "!f() { git add --all && git commit -m \"$*\"; }; f"
 	# Update previous commit with staged changes
 	gud = commit --amend --no-edit
 	# Same as `gud`, but also edit the commit message
