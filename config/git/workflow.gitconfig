@@ -1,0 +1,7 @@
+
+	#
+	# Workflow
+	#
+
+	# Create new branch from current and switch to it
+	newi = "!f() { BRANCH=issue-$1 && git checkout -b $BRANCH; }; f"
