@@ -1,3 +1,8 @@
+# Unset variables
+name=
+email=
+workflow=
+
 # Test `getopt` support
 function testGlobals {
   `${@:2}` > /dev/null
