@@ -141,7 +141,8 @@
 	diffminc = diff --color-words=.
 	# Resets the index and working tree.
 	# Any changes to tracked files in the working tree since HEAD commit are discarded.
-	die = reset --hard HEAD
+	# Uses HEAD commit by default, or HEAD~${NUMBER} if number is passed.
+	die = "!f() { re='^[0-9]+$'; if [[ $1 =~ $re ]]; then COMMIT=HEAD~$1; else COMMIT=HEAD; fi; git reset --hard $COMMIT; }; f"
 
 	#
 	# Plumbing Commands
