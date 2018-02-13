@@ -161,3 +161,12 @@
 	hidden = "!git ls-files -v | grep '^[[:lower:]]'"
 	# Show list of ignored files files
 	ignored = "!git status -s --ignored | grep '^!!'"
+
+  #
+	# Sharing and Updating Projects
+	#
+
+	# Show the origin name for this repository
+	origin = "!f() { echo `git remote get-url origin` | grep -oP '(?<=.)[^/]+(?=\\.git)'; }; f"
+	# Replace the origin remote name (both fetch and push) with new value
+	rename = "!f() { if [[ -z $1 ]]; then echo 'No argument supplied' && exit 1; fi; URL=`git remote get-url origin`; NEWURL=$(echo $URL | perl -pe \"s/(?<=.)[^\\/]+(?=\\.git)/$1/g\"); git remote set-url origin $NEWURL; git remote set-url --push origin $NEWURL; git remote -v; }; f"
