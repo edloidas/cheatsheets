@@ -6,6 +6,7 @@
 	ui = true
 [core]
 	autocrlf = input
+	editor = 'c:/pgm/editor/vscode/Code.exe' -w
 [alias]
 	#
 	# Utilities
@@ -90,7 +91,7 @@
 	recreate = "!f() { [[ -n $@ ]] && git checkout \"$@\" && git unpublish && git checkout master && git branch -D \"$@\" && git checkout -b \"$@\" && git publish; }; f"
 	# Checkout another branch (master by default) and remove the branch
 	# you was previously on. Can't remove master or the current branch.
-	return = "!f() { PREV=$(git branch-name) && CURR=${1:-\"master\"} && if [[ $PREV == \"master\" ]]; then echo \"Can't remove 'master' branch.\"; elif [[ $PREV == $CURR ]]; then echo \"Already on '$PREV'.\"; else git checkout \"$CURR\" && git del \"$PREV\"; fi }; f"
+	return = "!f() { PREV=$(git branch-name) && CURR=${1:-\"master\"} && if [[ $PREV == \"master\" ]]; then echo \"Can’t remove 'master' branch.\"; elif [[ $PREV == $CURR ]]; then echo \"Already on '$PREV'.\"; else git checkout \"$CURR\" && git del \"$PREV\"; fi }; f"
 	# Update and rebase previous commits. First argument is the number of commits (2 by default)
 	rework = "!f() { COUNT=${1:-\"2\"} && git rebase -i HEAD~$COUNT; }; f"
 	# Interactively rebase all the commits on the current branch
