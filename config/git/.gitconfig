@@ -75,6 +75,10 @@
 	del = branch -D
 	# Shortened `git branch`
 	b = branch
+	# Shortened `git push`
+	p = push
+	# Shortened `git pull`
+	pl = pull
 	# Create a new branch by adding a timestamp to the current branch name
 	bkp = "!git branch $(git branch-name)_$(date +%Y%m%d-%H%M%S)"
 	# Link current branch to the specific commit
@@ -120,10 +124,14 @@
 	s = status
 	# Parsable, machine-readable `git status`
 	shorty = status --short --branch
+	# Shortened `git add --all`
+	a = add --all
 	# Add all and commit with message
 	c = "!f() { git add --all && git commit -m \"$*\"; }; f"
 	# Update previous commit with staged changes
 	gud = commit --amend --no-edit
+	# Update previous commit with staged changes
+	guda = c = "!f() { git add --all && git commit --amend --no-edit; }; f"
 	# Same as `gud`, but also edit the commit message
 	commend = commit --amend
 	# Unstage any files that have been added to the staging area
@@ -146,6 +154,10 @@
 	# Any changes to tracked files in the working tree since HEAD commit are discarded.
 	# Uses HEAD commit by default, or HEAD~${NUMBER} if number is passed.
 	die = "!f() { re='^[0-9]+$'; if [[ $1 =~ $re ]]; then COMMIT=HEAD~$1; else COMMIT=HEAD; fi; git reset --hard $COMMIT; }; f"
+	# Resets the index and working tree.
+	# Keeps changes.
+	# Uses HEAD~1 commit by default, or HEAD~${NUMBER} if number is passed.
+	res = "!f() { re='^[0-9]+$'; if [[ $1 =~ $re ]]; then COMMIT=HEAD~$1; else COMMIT=HEAD~1; fi; git reset $COMMIT; }; f"
 
 	#
 	# Plumbing Commands

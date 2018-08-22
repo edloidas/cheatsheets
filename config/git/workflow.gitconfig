@@ -5,9 +5,12 @@
 
 	# Create new branch from current and switch to it
 	newi = "!f() { BRANCH=issue-$1 && git checkout -b $BRANCH; }; f"
+	# Remove branch
+	deli = "!f() { BRANCH=issue-$1 && git branch -D $BRANCH; }; f"
 	# Create new branch from current and switch to it
 	chi = "!f() { BRANCH=issue-$1 && git checkout $BRANCH; }; f"
 	# Clone Enonic repo
 	clonee = "!f() { URL=https://github.com/enonic/$1.git && git clone $URL; }; f"
+
 	# Clone edloidas repo
 	cl = "!f() { URL=https://github.com/edloidas/$1.git && git clone $URL; }; f"
