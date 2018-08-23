@@ -6,7 +6,7 @@
 	ui = true
 [core]
 	autocrlf = input
-	editor = 'c:/pgm/editor/vscode/Code.exe' -w
+	editor = code --wait
 [alias]
 	#
 	# Utilities
