@@ -3,14 +3,16 @@
 	# Workflow
 	#
 
-	# Create new branch from current and switch to it
+	# Create new `issue-*` branch from current and switch to it
 	newi = "!f() { BRANCH=issue-$1 && git checkout -b $BRANCH; }; f"
-	# Remove branch
+	# Remove `issue-*` branch
 	deli = "!f() { BRANCH=issue-$1 && git branch -D $BRANCH; }; f"
-	# Create new branch from current and switch to it
+	# Create `issue-*` new branch from current and switch to it
 	chi = "!f() { BRANCH=issue-$1 && git checkout $BRANCH; }; f"
 	# Clone Enonic repo
 	clonee = "!f() { URL=https://github.com/enonic/$1.git && git clone $URL; }; f"
+	# Create new `issue-*` branch from current, switch to it and publish
+	createi = "!f() { BRANCH=issue-$1 && git checkout -b $BRANCH && git publish; }; f"
 
 	# Clone edloidas repo
 	cl = "!f() { URL=https://github.com/edloidas/$1.git && git clone $URL; }; f"

@@ -90,6 +90,8 @@
 	# Forcefully update a remote ref only if upstream ref is what we expect, i.e.
 	# nobody has updated the branch upstream
 	please = push --force-with-lease
+	# Create new branch from the current, switch to it and publish
+	create = "!f() { [[ -n $@ ]] && git checkout -b \"$@\" && git publish; }; f"
 	# Delete a branch and recreate it from master — useful if you have, dev
 	# and a master branch and they could conceivably go out of sync
 	recreate = "!f() { [[ -n $@ ]] && git checkout \"$@\" && git unpublish && git checkout master && git branch -D \"$@\" && git checkout -b \"$@\" && git publish; }; f"
@@ -129,9 +131,11 @@
 	# Add all and commit with message
 	c = "!f() { git add --all && git commit -m \"$*\"; }; f"
 	# Update previous commit with staged changes
-	gud = commit --amend --no-edit
-	# Update previous commit with staged changes
-	guda = c = "!f() { git add --all && git commit --amend --no-edit; }; f"
+	# Supports flags `-a` (stage all files before commit) and `-p` (force push with lease after commit)
+	# gud = commit --amend --no-edit
+	# gud = "!f() { git add --all && git commit --amend --no-edit; }; f"
+	# gud = "!f() { while test $# -gt 0; do case "$1" in -A|--all) git add -A && git commit --amend --no-edit; exit 0;; *) shift;; esac; done; git commit --amend --no-edit; }; f"
+	gud = "!f() { while getopts 'ap' flag; do case \"${flag}\" in a) a_flag='true' ;; p) p_flag='true' ;; esac; done; if [[ -n $a_flag ]]; then git a; fi; git commit --amend --no-edit; if [[ -n $p_flag ]]; then git please; fi; }; f"
 	# Same as `gud`, but also edit the commit message
 	commend = commit --amend
 	# Unstage any files that have been added to the staging area
