@@ -43,11 +43,12 @@ SAVED_EMAIL=useremail@example.com
 * `recap` and `today` by [Harry Roberts & Mike Street](https://twitter.com/csswizardry/status/784399286050156544) (_modified_)
 * `diffmin` by [Harry Roberts](https://twitter.com/csswizardry/status/867676530780065792)
 * `please`, `commend`, `it`, `shorty`, `stash*` by [Tim Pettersen](https://hackernoon.com/lesser-known-git-commands-151a1918a60) (_modified_)
-* `lolr` [post by Phil Nash](https://philna.sh/blog/2017/01/04/git-back-to-the-future/) and [tweet by Jake Archibald](https://twitter.com/jaffathecake/status/816595263733305344)  (_modified_)
+* `lolr` [post by Phil Nash](https://philna.sh/blog/2017/01/04/git-back-to-the-future/) and [tweet by Jake Archibald](https://twitter.com/jaffathecake/status/816595263733305344) (_modified_)
 * `git checkout -` by [Zack Hall](https://twitter.com/ZTHall/status/785653842792714240) (_modified_)
 * `hide`, `unhide`, `unhide-all`, `hidden`, `ignored` by [ryenus](https://stackoverflow.com/a/37083903/1478194) and others
 * `sclone` by [Paul Irish](https://github.com/paulirish/dotfiles/blob/master/.gitconfig)
 * `unshallow` based on steps from [Stack Overflow](https://stackoverflow.com/a/27393574/1478194)
+* `yolo` by [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/lol/lol.plugin.zsh#L48)
 * [Oh shit, Git!](http://ohshitgit.com/) by Katie Sylor-Miller
 * [Changing a commit message](https://help.github.com/articles/changing-a-commit-message/) by GitHub
 * [Pro Git](https://git-scm.com/book/en/v2) book by Scott Chacon and Ben Straub

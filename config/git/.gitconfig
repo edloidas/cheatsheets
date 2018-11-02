@@ -130,6 +130,8 @@
 	a = add --all
 	# Add all and commit with message
 	c = "!f() { git add --all && git commit -m \"$*\"; }; f"
+	# Same as `c`, but with a random commit message
+	yolo = "!f() { git add --all && git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\"; }; f"
 	# Update previous commit with staged changes
 	# Supports flags `-a` (stage all files before commit) and `-p` (force push with lease after commit)
 	# gud = commit --amend --no-edit
