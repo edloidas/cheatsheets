@@ -79,6 +79,16 @@
 	p = push
 	# Shortened `git pull`
 	pl = pull
+	# Shortened `git pull --rebase`
+	plr = pull --rebase
+	# Shortened `git rebase`
+	r = rebase
+	# Shortened `git rebase master`
+	rm = rebase master
+	# Shortened `git rebase --abort`
+	ra = rebase --abort
+	# Shortened `git rebase --continue`
+	rc = rebase --continue
 	# Create a new branch by adding a timestamp to the current branch name
 	bkp = "!git branch $(git branch-name)_$(date +%Y%m%d-%H%M%S)"
 	# Link current branch to the specific commit
@@ -110,6 +120,10 @@
 	stash2 = stash --include-untracked
 	# Stash ignored, untracked, and tracked files
 	stash3 = stash --all
+	# Show stash list
+	stashes = stash list
+	# Apply and throw away the latest stash
+	unstash = stash pop
 	# Find the commits that were introduced by a merge
 	merge-log = "!git lol $(git merge-span .. $1)"
 	# Show the changes that were introduced by a merge
