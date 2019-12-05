@@ -78,8 +78,8 @@ cat $GIT_TEMPLATE >> $GIT
 if [ "$workflow" == "true" ]; then cat $GIT_WORKFLOW >> $GIT; fi
 
 # save credentials
-echo SAVED_NAME=$name>$CRED
-echo SAVED_EMAIL=$email>>$CRED
+echo SAVED_NAME=\"$name\">$CRED
+echo SAVED_EMAIL=\"$email\">>$CRED
 echo SAVED_WORKFLOW=$workflow>>$CRED
 
 echo "Created .gitconfig for ( $name : $email )"

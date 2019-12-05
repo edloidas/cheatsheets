@@ -7,8 +7,10 @@
 	newi = "!f() { BRANCH=issue-$1 && git checkout -b $BRANCH; }; f"
 	# Remove `issue-*` branch
 	deli = "!f() { BRANCH=issue-$1 && git branch -D $BRANCH; }; f"
-	# Create `issue-*` new branch from current and switch to it
+	# Switch to `issue-*` branch
 	chi = "!f() { BRANCH=issue-$1 && git checkout $BRANCH; }; f"
+	# Switch to `epic-*` branch
+	che = "!f() { BRANCH=epic-$1 && git checkout $BRANCH; }; f"
 	# Switch to next branch
 	chn = checkout next
 	# Clone Enonic repo

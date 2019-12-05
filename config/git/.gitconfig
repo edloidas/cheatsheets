@@ -89,6 +89,14 @@
 	ra = rebase --abort
 	# Shortened `git rebase --continue`
 	rc = rebase --continue
+	# Shortened `git merge`
+	m = rebase
+	# Shortened `git merge master`
+	mm = merge master
+	# Shortened `git merge --abort`
+	ma = merge --abort
+	# Shortened `git merge --continue`
+	mc = merge --continue
 	# Create a new branch by adding a timestamp to the current branch name
 	bkp = "!git branch $(git branch-name)_$(date +%Y%m%d-%H%M%S)"
 	# Link current branch to the specific commit
