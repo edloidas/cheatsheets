@@ -81,6 +81,8 @@
 	b = branch
 	# Shortened `git push`
 	p = push
+	# Shortened `git push --tags`
+	pt = push --tags
 	# Shortened `git pull`
 	pl = pull
 	# Shortened `git pull --rebase`
