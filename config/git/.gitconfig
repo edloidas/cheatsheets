@@ -24,8 +24,10 @@
 	merge-span = "!f() { echo $(git log -1 $2 --merges --pretty=format:%P | cut -d' ' -f1)$1$(git log -1 $2 --merges --pretty=format:%P | cut -d' ' -f2); }; f"
 	# Show aliases with name highlight
 	aliases = "!f() { git config --list | grep --color 'alias\\.[a-zA-Z0-9]\\{1,\\}='; }; f"
+	# Show tags
+	tags = tag -l
 	# Show tags pointing at the current commit
-	tags = tag -l --points-at HEAD
+	tagsh = tag -l --points-at HEAD
 
 	#
 	# Getting and Creating Projects
@@ -67,6 +69,8 @@
 	ch = checkout
 	# Switch to master branch
 	chm = checkout master
+	# Switch to main branch
+	chmn = checkout main
 	# Switch to previously active branch
 	back = checkout -
 	# Create new branch from current and switch to it
@@ -84,15 +88,19 @@
 	# Shortened `git rebase`
 	r = rebase
 	# Shortened `git rebase master`
-	rm = rebase master
+	rms = rebase master
+	# Shortened `git rebase main`
+	rmn = rebase main
 	# Shortened `git rebase --abort`
 	ra = rebase --abort
 	# Shortened `git rebase --continue`
 	rc = rebase --continue
 	# Shortened `git merge`
-	m = rebase
+	m = merge
 	# Shortened `git merge master`
-	mm = merge master
+	mms = merge master
+	# Shortened `git merge main`
+	mmn = merge main
 	# Shortened `git merge --abort`
 	ma = merge --abort
 	# Shortened `git merge --continue`
@@ -166,6 +174,8 @@
 	unstage = reset HEAD
 	# Do commit with changes, that will revert changes of the specified commit (HEAD by default)
 	undo = "!f() { COMMIT=${1:-\"HEAD\"} && git revert --no-edit $COMMIT; }; f"
+	# Show changes that have been staged
+	diffh = diff HEAD~1
 	# Show changes that have been staged
 	diffc = diff --cached
 	# Show list of changed files
